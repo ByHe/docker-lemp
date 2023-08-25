@@ -17,7 +17,7 @@
 
       define ('DB_USER', 'root');
       define ('DB_PASSWORD', '12345'); 
-      define ('DB_HOST', 'localhost'); // Byt till localhost
+      define ('DB_HOST', 'mariadb'); // Byt till localhost om inte docker
       define ('DB_NAME', 'mysql');
 
       // Byt?
