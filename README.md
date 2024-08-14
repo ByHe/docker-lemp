@@ -4,7 +4,6 @@
 - php   
 - mariadb -> mariadb
 - phpmyadmin -> localhost:8080
-- composer
 
 ### HowTo
 
@@ -34,4 +33,4 @@
 ?> // Ej nödvändigt att avslut "ren" php med ?>
 ````
 ### ToDo
-    Stöd för https, TLS (ssl).
+    

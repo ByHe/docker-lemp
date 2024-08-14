@@ -45,9 +45,3 @@ services:
       - 8080:80
     depends_on:
       - mariadb
-
-  composer:
-    image: composer/composer:latest
-    command: ["composer", "install"]
-    volumes:
-      - ./www:/app
