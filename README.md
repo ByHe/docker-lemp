@@ -24,7 +24,7 @@
     // Definierar konstanter med användarinformation.
     define ('DB_USER', 'userName'); // Användare i MariaDB
     define ('DB_PASSWORD', '12345');
-    define ('DB_HOST', 'mariadb');
+    define ('DB_HOST', 'mariadb'); // Se docker-compose under mariadb och container_name:
     define ('DB_NAME', 'dbName');   // Databasen som anslutning skall ske till
 
     // Skapar en anslutning till MariaDB och databasen dbName
