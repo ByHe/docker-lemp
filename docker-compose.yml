@@ -13,6 +13,8 @@ services:
       - ./config/ssl:/etc/ssl
     depends_on:
       - php
+    environment:
+      - TZ=Europe/Stockholm
 
   php:
     build: ./docker/php
@@ -33,6 +35,7 @@ services:
       - MYSQL_DATABASE=db
       - MYSQL_USER=pma
       - MYSQL_PASSWORD=12345
+      - TZ=Europe/Stockholm
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
