@@ -10,7 +10,7 @@
 ##### Webbroten
     www/public
 ##### Starta servern (containern) med
-    docke compose up -d
+    docker compose up -d
 ##### Stoppa servern (containern) med
     docker compose down
 ##### Serverns url
