@@ -22,6 +22,8 @@ services:
     volumes:
       - ./www:/var/www
       - ./config/php/php.ini:/usr/local/etc/php/php.ini
+    environment:
+      - TZ=Europe/Stockholm
 
   mariadb:
     image: mariadb:latest
@@ -42,8 +44,8 @@ services:
     container_name: pma
     restart: always
     environment:
-      PMA_HOST: mariadb
-      #PMA_ABSOLUTE_URI: http://localhost/pma/
+      - PMA_HOST= mariadb
+      - TZ=Europe/Stockholm
     ports:
       - 8080:80
     depends_on:
