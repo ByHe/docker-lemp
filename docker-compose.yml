@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: nginx:1.28.1-alpine # Ta bort om SSL
+    image: nginx:1.28.1-alpine # Ta bort om alpine om SSL
     container_name: nginx
     restart: unless-stopped
     environment:
@@ -52,7 +52,7 @@ services:
       PMA_HOST: mariadb
       TZ: Europe/Stockholm
     ports:
-      - "8080:80"
+      - "127.0.0.1:8080:80"
     depends_on:
       - mariadb
     networks:
