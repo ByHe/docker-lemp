@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: nginx:1.29.4-alpine # Ta bort om SSL
+    image: nginx:1.28.1-alpine # Ta bort om SSL
     container_name: nginx
     restart: unless-stopped
     environment:
