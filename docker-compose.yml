@@ -9,9 +9,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./www/public:/var/www/public:ro
-      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./config/ssl:/etc/ssl:ro
+      - ./www/public:/var/www/public:ro,z
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro,z
+      - ./config/ssl:/etc/ssl:ro,z
     depends_on:
       - php
     networks:
@@ -24,8 +24,8 @@ services:
     restart: unless-stopped
     command: php-fpm
     volumes:
-      - ./www:/var/www
-      - ./config/php/php.ini:/usr/local/etc/php/php.ini:ro
+      - ./www:/var/www:z
+      - ./config/php/php.ini:/usr/local/etc/php/php.ini:ro,z
     networks:
       - app-network
     environment:
@@ -36,8 +36,8 @@ services:
     container_name: mariadb
     restart: unless-stopped
     volumes:
-      - ./db:/var/lib/mysql
-      - ./config/mysql/my.cnf:/etc/mysql/my.cnf:ro
+      - ./db:/var/lib/mysql:z
+      - ./config/mysql/my.cnf:/etc/mysql/my.cnf:ro,z
     environment:
       MYSQL_ROOT_PASSWORD: 12345
       TZ: Europe/Stockholm
