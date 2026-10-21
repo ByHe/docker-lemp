@@ -29,8 +29,9 @@ RUN apt-get update && apt-get upgrade -y \
 ARG UID=1000
 ARG GID=1000
 
-RUN addgroup -g ${GID} -S www \
- && adduser -u ${UID} -S -D -G www www
+# Ändrat tillbaka till Debians kommandon
+RUN groupadd -g ${GID} www \
+ && useradd -u ${UID} -ms /bin/bash -g www www
 
 COPY --chown=www:www . /var/www
 
